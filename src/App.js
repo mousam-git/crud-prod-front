@@ -12,7 +12,9 @@ function App() {
   // get all the products
   const getProducts = async () => {
     try {
-      const productList = await axios.get("http://127.0.0.1:5500/api");
+      const productList = await axios.get(
+        "https://crud-prod-back.herokuapp.com/api"
+      );
       setProducts(productList.data.data);
       setIsLoading(false);
     } catch (err) {
@@ -29,7 +31,11 @@ function App() {
     };
 
     try {
-      const res = await axios.post("http://127.0.0.1:5500/api", data, config);
+      const res = await axios.post(
+        "https://crud-prod-back.herokuapp.com/api",
+        data,
+        config
+      );
       setReqData(new Date());
     } catch (err) {
       console.log(err);
@@ -38,7 +44,7 @@ function App() {
 
   const delProduct = async (productId) => {
     const product = await axios.delete(
-      `http://127.0.0.1:5500/api/${productId}`
+      `https://crud-prod-back.herokuapp.com/api/${productId}`
     );
     setReqData(new Date());
   };
