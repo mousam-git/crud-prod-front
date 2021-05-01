@@ -40,7 +40,7 @@ function AddProduct({ addProduct }) {
             onChange={(e) => setImage(e.target.value)}
           />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Add" className="btn btn-add" />
       </form>
     </div>
   );

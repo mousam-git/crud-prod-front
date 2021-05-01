@@ -14,7 +14,7 @@ function Product(props) {
         </p>
       </div>
       <div className="product-btns">
-        <button className="btn-del" onClick={() => props.delProduct(_id)}>
+        <button className="btn btn-del" onClick={() => props.delProduct(_id)}>
           Delete
         </button>
       </div>
