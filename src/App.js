@@ -16,7 +16,6 @@ function App() {
         "https://crud-prod-back.herokuapp.com/api"
       );
       setProducts(productList.data.data);
-      setIsLoading(false);
     } catch (err) {
       console.log(err);
     }
