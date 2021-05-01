@@ -7,7 +7,7 @@ import AddProduct from "./components/AddProduct";
 function App() {
   const [products, setProducts] = useState([]);
   const [reqData, setReqData] = useState(new Date());
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   // get all the products
   const getProducts = async () => {
@@ -36,6 +36,7 @@ function App() {
         data,
         config
       );
+      console.log(res);
       setReqData(new Date());
     } catch (err) {
       console.log(err);
@@ -46,6 +47,7 @@ function App() {
     const product = await axios.delete(
       `https://crud-prod-back.herokuapp.com/api/${productId}`
     );
+    console.log(product);
     setReqData(new Date());
   };
 
